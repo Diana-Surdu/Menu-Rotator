@@ -1,0 +1,89 @@
+html {
+  font-size: 5px;
+}
+body {
+  background-color: #333;
+  color: white;
+}
+
+/*COMPONENT STYLES*/
+.menu-rotator {
+  width: 39em;
+  height: 39em;
+  /*border: 1px solid green;*/
+
+  font-size: 200%;
+
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
+
+  border-radius: 100%;
+}
+.menu-rotator a {
+  color: white;
+  text-decoration: none;
+  /*border: 1px solid darkgreen;*/
+  text-align: center;
+  line-height: 10em;
+
+  border-radius: 100%;
+  background-color: #777;
+
+  transition: .3s;
+
+}
+
+.menu-rotator a:hover {
+  background-color: #888;
+
+}
+
+.menu-rotator i {
+  font-size: 7rem;
+}
+
+.menu-rotator a:first-child {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.menu-rotator a:nth-child(2) {
+  grid-row-start: 3;
+  grid-column-start: 5;
+  
+}
+.menu-rotator a:nth-child(3) {
+  grid-row-start: 5;
+  grid-column-start: 3;
+}
+
+.menu-rotator a:nth-child(4) {
+  grid-row-start: 3;
+  grid-column-start: 1;
+}
+
+.menu-rotator div:last-child {
+  grid-row-start: 2;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 5;
+
+  background-color: #222;
+  border-radius: 100%;
+  text-align: center;
+
+  transform: rotate(0deg);
+  transition: .5s;
+}
+#opt-2:target .menu-rotator div.indicator {
+  transform: rotate(90deg);
+}
+
+#opt-3:target .menu-rotator div.indicator {
+  transform: rotate(180deg);
+}
+
+#opt-4:target .menu-rotator div.indicator {
+  transform: rotate(270deg);
+}
